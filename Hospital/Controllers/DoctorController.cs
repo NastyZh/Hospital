@@ -60,13 +60,13 @@ public class DoctorController : ControllerBase
             }
         }
 
-        // Обновляем данные доктора
+        
         doctor.FullName = updatedDoctor.FullName;
         doctor.Cabinet.Id = updatedDoctor.Cabinet.Id;
         doctor.Specialization.Id = updatedDoctor.Specialization.Id;
         doctor.DistrictId = updatedDoctor.DistrictId;
 
-        // Сохраняем изменения
+        
         await _context.SaveChangesAsync();
 
         return Ok(doctor);
