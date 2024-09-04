@@ -50,7 +50,7 @@ public class DoctorController : ControllerBase
             return NotFound("Doctor not found.");
         }
 
-        // Проверяем, существует ли указанный DistrictId
+       
         if (updatedDoctor.DistrictId.HasValue)
         {
             var districtExists = await _context.Districts.AnyAsync(d => d.Id == updatedDoctor.DistrictId);
